@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.graphqlexample
+package com.example.graphqlexample.config
 
 import com.expediagroup.graphql.execution.FunctionDataFetcher
 import com.expediagroup.graphql.execution.SimpleKotlinDataFetcherFactoryProvider
@@ -33,9 +33,9 @@ class CustomDataFetcherFactoryProvider(
 
     override fun functionDataFetcherFactory(target: Any?, kFunction: KFunction<*>) = DataFetcherFactory {
         CustomFunctionDataFetcher(
-            target = target,
-            fn = kFunction,
-            objectMapper = objectMapper)
+                target = target,
+                fn = kFunction,
+                objectMapper = objectMapper)
     }
 }
 
